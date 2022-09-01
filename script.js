@@ -6,6 +6,7 @@ const tableTotal = document.querySelector(".number-games")
 let playerScore = 0
 let computerScore = 0
 let numberOfGames = 0
+let totalnumber = 0
 const hands = ["Rock", "Paper", "Scissors"]
 const rockButton = document.querySelector(".rock")
 const paperButton = document.querySelector(".paper")
