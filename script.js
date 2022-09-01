@@ -2,8 +2,10 @@ const gameBoard = document.querySelector(".gameboard")
 const result = document.querySelector(".result")
 const tableComputer = document.querySelector(".computer-results")
 const tablePlayer = document.querySelector(".player-results")
+const tableTotal = document.querySelector(".number-games")
 let playerScore = 0
 let computerScore = 0
+let numberOfGames = 0
 const hands = ["Rock", "Paper", "Scissors"]
 const rockButton = document.querySelector(".rock")
 const paperButton = document.querySelector(".paper")
@@ -33,6 +35,8 @@ function chooseScissors() {
 
 function randomizer(hands) {
      aiChoice = hands[Math.floor(Math.random()*hands.length)]
+     numberOfGames += 1
+     tableTotal.innerHTML = numberOfGames 
      gameBoard.innerHTML = "The computer chose " + aiChoice
 
      if (playersChoice === aiChoice) {
